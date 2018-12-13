@@ -1,4 +1,4 @@
-# Hello World server
+# GraphQl server
 
 The server that is used to serve GraphQL data for local dev.
 
@@ -11,7 +11,7 @@ It uses a very simple in-memory database, so if you restart the server or change
 Clone the repository and run `npm install`
 
 ```
-https://github.com/GeorgianSorinMaxim/frontpage-server.git
+https://github.com/acuris-georgian-maxim/graphql-server
 cd frontpage-server
 npm install
 ```
