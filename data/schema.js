@@ -3,16 +3,16 @@ import { makeExecutableSchema } from 'graphql-tools';
 import resolvers from './resolvers';
 
 const schema = `
-type Vessel {
+type Item {
   id: Int! # the ! means that every object _must_ have an id
   location: String
   type: String
-  transactions: [Transaction] # the list of Transactions by this vessel
+  transactions: [Transaction] # the list of Transactions by this item
 }
 
 type Transaction {
   id: Int!
-  vessel: Vessel
+  item: Item
   title: String
   date: String
 }
@@ -20,7 +20,7 @@ type Transaction {
 # the schema allows the following query:
 type Query {
   transactions: [Transaction]
-  vessels(id: Int!): Vessel
+  item(id: Int!): Item
 }
 
 # this schema allows the following mutation:
